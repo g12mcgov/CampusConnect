@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/custom.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/animate.min.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="stats-bar text-center"></div>
+
+	<div class="container">
+		<div class="splash">
+			<div class="overlay">
+				<div class="logo"></div>
+				<form class="form-inline join-chat" role="form">
+					<div class="input-group input-group-lg">
+						<input name="email" type="email" class="form-control input-lg" placeholder="email address" required>
+						<span class="input-group-btn">
+							<button class="btn btn-danger" type="submit button">Enter</button>
+						</span>
+					</div>
+				</form>
+				<hr>
+				<div class="marketing">
+					<div class="row">
+						<div class="col-lg-6">
+							<ul>
+								<li>Ask questions with no strings attached</li>
+								<li>Meet and greet others.</li>
+								<li>Bored? There's always someone online.</li>
+							</ul>
+
+							</p-->
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<p>A carbon_ghost build.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="messages-wrapper">
+			<ul class="messages list-group reverseOrder">
+			</ul>
+		</div>
+
+		<div class="chat-panel panel panel-default">
+			<div class="panel-body">
+				<form class="compose-message-form" role="form">
+					<div class="form-group">
+						<textarea placeholder="Type your message..." name="message" class="form-control" rows="3" required></textarea>
+					</div>
+					<div class="form-group">
+						<p class="text-muted text-center">Enter to send / Ctr+Enter for a new line</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='scripts/vendor/md5.js') }}"></script>
+	<script src="{{ url_for('static', filename='scripts/vendor/socket.io.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='scripts/vendor/handlebars.js') }}"></script>
+	<script src="{{ url_for('static', filename='scripts/campusconnect.js') }}"></script>
+
+	{% raw %}
+
+	<script id="temlate-chat-message" type="text/template">
+		<li class="list-group-item child">
+			<div class="avatar-wrapper">
+				<img width="32px" height="32px" src="{{avatarUrl}}">
+			</div>
+			<div class="chat-message-wrapper animated fadeIn">
+				<span class="label {{labelClass}}">{{author}} says</span>
+				<p>{{message}}</p>
+			</div>
+			<span class="time">{{time}}</span>
+		</li>
+	</script>
+
+	<script id="template-stats-bar" type="text/template">
+		<span class="text-muted">Who is online?</span>
+		{{# each people}}
+			<img alt="{{email}}" width="20px" height="20px" src="{{image}}">
+		{{/each}}
+	</script>
+
+
+	{% endraw %}
+
+
+</body>
+</html>

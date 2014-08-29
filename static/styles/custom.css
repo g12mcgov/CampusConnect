@@ -1,0 +1,297 @@
+/* Space out content a bit */
+body, html {
+  overflow-x: hidden;
+  height: 100%;
+  background-color: #22fff4;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #373b44;
+}
+
+h1, h2, h3 ,h4 {
+  font-family: 'Arvo', serif;
+}
+
+.logo {
+  height: 150px;
+  width: 100%;
+  display: inline-block;
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.marketing li {
+  color: black;
+}
+
+.marketing .row {
+  margin: 0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+/* jquery validation */
+
+label.error {
+  display: none !important;
+} 
+
+
+/* landing */
+
+.splash {
+  margin-top: 50px;
+  background: none;
+  background-color: white;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  position: relative;
+  color: #e7e7e7;
+  border-radius: 25px;
+}
+
+.overlay {
+  padding: 30px 40px 20px 40px;
+  /** background-color: rgba(255,255,255,0.4);  **/
+}
+
+.overlay h1 {
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  font-size: 90px;
+  color: #e7e7e7;
+  font-family: 'Arvo', serif;
+  font-weight: 700;
+  display: inline-block;
+
+}
+
+.overlay p.lead {
+  padding-left: 0.5em;
+}
+
+.join-chat {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+.chat-panel {
+  -webkit-transform : translate(1000%,0);
+  -moz-transform : translate(1000%,0);
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .chat-panel {
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .chat-panel {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chat-panel {
+    max-width: 730px;
+  }
+}
+
+.messages-wrapper {
+  -webkit-transform: translate(-1000%,0);
+  -moz-transform: translate(-1000%,0);
+  position: absolute;
+  top: 42px;
+  left: 0;
+  width: 102%;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.messages {
+  padding-top: 138px;
+}
+
+.avatar-wrapper {
+  height:1px;
+}
+
+.chat-message-wrapper {
+  padding-left: 43px;
+  margin-top: -3px;
+}
+
+.chat-message-wrapper p {
+  text-align: center;
+  padding-top:5px;
+}
+
+.time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  color: #ccc;
+}
+
+.stats-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+  right: 0;
+  border-bottom: solid 1px #ccc;
+  background-color: #22fff4;
+  padding: 7px;
+  -webkit-transform : translate(0,-100%); 
+  -moz-transform : translate(0,-100%);
+}
+
+.input-group-addon {
+  color: #373b44;
+}
+
+.github {
+  border-radius: 0px;
+}
+
+img {
+  border-radius: 1000px;
+}
+
+.btn-success, .btn-success[disabled] {
+  background-color: #d9a43c;
+  border-color: #d29929;
+}
+
+.btn-success:hover, .btn-success:active, .btn-success:focus,
+.btn-success[disabled], fieldset[disabled] .btn-success,  
+.btn-success[disabled]:hover, fieldset[disabled] .btn-success:hover,
+.btn-success[disabled]:focus, fieldset[disabled] .btn-success:focus,
+.btn-success[disabled]:active, fieldset[disabled] .btn-success:active,
+.btn-success[disabled].active, fieldset[disabled] .btn-success.active {
+  background-color: #d29929;
+  border-color: #bd8a25;
+}
+
+.text-muted {
+  margin-right: 6px;
+  color: black;
+}
+
+.stats-bar {
+  background-color: white;
+  border-color: #373b44;
+  box-shadow: 0px 0px 4px 1px rgba(51,51,51, 0.5);
+}
+
+.reverseOrder,
+.reverseOrder > .child {
+    -webkit-transform: rotate(180deg);
+       -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 10px;
+  padding: 0;
+  border: none;
+  color: #bbb;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 12px;
+}
+
+
+.list-group-item:first-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.list-group-item:last-child {
+  border-radius: 4px 4px 0 0;
+}
